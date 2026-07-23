@@ -1,0 +1,21 @@
+# Python
+venv/
+__pycache__/
+*.py[cod]
+
+# Data files (keep raw/processed out of git tracking if large)
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# VS Code / OS
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Quarto rendering output
+*_files/
