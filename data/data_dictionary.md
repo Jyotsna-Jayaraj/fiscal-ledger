@@ -8,6 +8,24 @@ This dataset contains panel data on national fiscal budgets across various count
 
 ---
 
+## Data Engineering & Pipeline Quality Notes
+
+### 1. File Normalization & Pipeline Aggregation
+* **Process:** Individual country level fiscal files were ingested, schema-validated for column name consistency, cast to unified data types, and concatenated into a standardized panel data structure.
+* **Schema Enforcement:** Standardized primary key formatting (`Country`, `Year`) across all sovereign records to enable seamless time-series panel analysis.
+
+### 2. Percentage Integrity & Mathematical Audit
+* **Allocation Sums:** The column `Total_Percentage_Sum` tracks the cross-sectoral sum for each country-year row. 
+* **Era-Specific Deviations:** While post-war and modern records align strictly with $100.00\%$, era-specific rounding deviations and floating-point variances (ranging roughly between $99.98\%$ and $100.02\%$) are observed in historical periods (e.g., WWII budget estimates and wartime emergency allocations).
+* **Audit Tracking:** Rows exhibiting precision deviations are flagged via `Pct_Discrepancy_Flag` to preserve historical raw data integrity without distorting policy analysis.
+
+### 3. Panel Coverage & Historical Gaps
+* **WWII Data Gaps (1939–1945):** Notable historical data omissions exist during World War II for occupied or annexed nations (e.g., France, Netherlands, Philippines) due to severe administrative disruption or suspended fiscal reporting.
+* **Post-1991 Soviet Bloc Transitions:** Eastern European and Central Asian sovereign records (e.g., Russia, Kazakhstan) begin reporting in the post-1991 era following the dissolution of the Soviet Union.
+* **Continuous Panels:** Major un-occupied belligerents and neutral powers (e.g., USA, UK) maintain uninterrupted coverage spanning 1936 to 2026.
+
+---
+
 ## Variable Definitions
 
 ### 1. Identifiers & Temporal Coordinates
