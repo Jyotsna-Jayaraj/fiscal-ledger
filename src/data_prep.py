@@ -1,11 +1,25 @@
 from pathlib import Path
 import pandas as pd
 import numpy as np
+import re
+
+def clean_country_name(filename_stem: str) -> str:
+    """
+    Extracts the clean country name from messy filenames.
+    Example: 'Argentina_Real_Budget_1946_2026' -> 'Argentina'
+    """
+    # Replace underscores with spaces
+    name = filename_stem.replace("_", " ")
+    
+    # Strip common metadata artifacts like 'Real Budget 1946 2026' or trailing years
+    name = re.sub(r'(?i)\b(real|budget|nominal|\d{4})\b', '', name)
+    
+    # Clean up excess spaces
+    return name.strip()
 
 def merge_country_files(raw_dir: Path) -> pd.DataFrame:
     """
-    Scans a directory of individual country CSV files, extracts the country name 
-    from the filename, standardizes columns, and concatenates them into one DataFrame.
+    Scans CSVs, extracts clean country names, and concatenates them.
     """
     country_files = list(raw_dir.glob("*.csv"))
     
@@ -15,22 +29,17 @@ def merge_country_files(raw_dir: Path) -> pd.DataFrame:
     df_list = []
     
     for file_path in country_files:
-        # Extract country name from filename (e.g., 'United_States.csv' -> 'United States')
-        country_name = file_path.stem.replace("_", " ").title()
+        country_name = clean_country_name(file_path.stem)
         
         df_country = pd.read_csv(file_path)
         df_country.columns = df_country.columns.str.strip()
         
-        # Add Country column if not present in individual file
-        if 'Country' not in df_country.columns:
-            df_country.insert(0, 'Country', country_name)
+        # Override or insert Country column with clean name
+        df_country['Country'] = country_name
             
         df_list.append(df_country)
         
-    # Concatenate all country DataFrames into one master panel
     merged_df = pd.concat(df_list, ignore_index=True)
-    
-    # Clean and sort panel keys
     merged_df = merged_df.sort_values(by=['Country', 'Year']).reset_index(drop=True)
     return merged_df
 
