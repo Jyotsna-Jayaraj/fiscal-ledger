@@ -1,0 +1,69 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:         log_social_amt   R-squared:                       0.998
+Model:                            OLS   Adj. R-squared:                  0.998
+Method:                 Least Squares   F-statistic:                 2.271e+05
+Date:                Thu, 20 Aug 2026   Prob (F-statistic):               0.00
+Time:                        21:00:11   Log-Likelihood:                 2989.8
+No. Observations:                3654   AIC:                            -5888.
+Df Residuals:                    3608   BIC:                            -5602.
+Df Model:                          45                                         
+Covariance Type:                  HC1                                         
+======================================================================================================
+                                         coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------------------------------
+Intercept                             -2.2459      0.014   -163.517      0.000      -2.273      -2.219
+C(Country)[T.Australia]                0.6966      0.014     49.369      0.000       0.669       0.724
+C(Country)[T.Bangladesh]              -0.2344      0.018    -13.380      0.000      -0.269      -0.200
+C(Country)[T.Brazil]                  -0.0012      0.014     -0.084      0.933      -0.028       0.026
+C(Country)[T.Canada]                   0.6794      0.014     47.497      0.000       0.651       0.707
+C(Country)[T.Chile]                    0.0481      0.015      3.203      0.001       0.019       0.078
+C(Country)[T.China]                   -0.0651      0.015     -4.320      0.000      -0.095      -0.036
+C(Country)[T.Colombia]                -0.1960      0.017    -11.701      0.000      -0.229      -0.163
+C(Country)[T.Egypt]                   -0.1936      0.020     -9.658      0.000      -0.233      -0.154
+C(Country)[T.France]                   0.9120      0.014     62.978      0.000       0.884       0.940
+C(Country)[T.Germany]                  0.7961      0.014     55.020      0.000       0.768       0.824
+C(Country)[T.Greece]                   0.7618      0.016     47.488      0.000       0.730       0.793
+C(Country)[T.India]                   -0.2827      0.017    -16.289      0.000      -0.317      -0.249
+C(Country)[T.Indonesia]               -0.0044      0.020     -0.222      0.824      -0.043       0.034
+C(Country)[T.Iran]                    -0.0193      0.018     -1.099      0.272      -0.054       0.015
+C(Country)[T.Ireland]                  0.6478      0.016     41.117      0.000       0.617       0.679
+C(Country)[T.Israel]                  -0.0885      0.017     -5.138      0.000      -0.122      -0.055
+C(Country)[T.Italy]                    0.8703      0.016     53.637      0.000       0.839       0.902
+C(Country)[T.Japan]                    0.7205      0.015     48.054      0.000       0.691       0.750
+C(Country)[T.Kazakhstan]               0.2388      0.015     16.108      0.000       0.210       0.268
+C(Country)[T.Malaysia]                -0.2579      0.015    -17.342      0.000      -0.287      -0.229
+C(Country)[T.Mexico]                  -0.2405      0.039     -6.189      0.000      -0.317      -0.164
+C(Country)[T.Netherlands]              0.7983      0.014     56.807      0.000       0.771       0.826
+C(Country)[T.New Zealand]              0.7096      0.015     48.826      0.000       0.681       0.738
+C(Country)[T.Nigeria]                  0.1432      0.014     10.345      0.000       0.116       0.170
+C(Country)[T.Pakistan]                -0.2089      0.015    -13.578      0.000      -0.239      -0.179
+C(Country)[T.Peru]                    -0.0017      0.023     -0.076      0.940      -0.046       0.043
+C(Country)[T.Philippines]             -0.7286      0.037    -19.800      0.000      -0.801      -0.656
+C(Country)[T.Poland]                   0.2664      0.015     18.320      0.000       0.238       0.295
+C(Country)[T.Portugal]                 0.7756      0.017     44.937      0.000       0.742       0.809
+C(Country)[T.Romania]                  0.2660      0.016     16.708      0.000       0.235       0.297
+C(Country)[T.Russia]                   0.1137      0.015      7.347      0.000       0.083       0.144
+C(Country)[T.Saudi Arabia]            -0.2690      0.019    -14.281      0.000      -0.306      -0.232
+C(Country)[T.Singapore]               -0.4438      0.033    -13.477      0.000      -0.508      -0.379
+C(Country)[T.South Africa]            -0.3095      0.016    -19.349      0.000      -0.341      -0.278
+C(Country)[T.South Korea]              0.1909      0.014     13.190      0.000       0.163       0.219
+C(Country)[T.Spain]                    0.6478      0.014     45.574      0.000       0.620       0.676
+C(Country)[T.Sweden]                   0.7909      0.015     51.220      0.000       0.761       0.821
+C(Country)[T.Switzerland]              0.8308      0.014     59.885      0.000       0.804       0.858
+C(Country)[T.Thailand]                -0.3298      0.019    -17.116      0.000      -0.368      -0.292
+C(Country)[T.Turkey]                   0.0313      0.022      1.455      0.146      -0.011       0.073
+C(Country)[T.UK]                       0.5708      0.015     38.004      0.000       0.541       0.600
+C(Country)[T.USA]                      0.5146      0.017     31.099      0.000       0.482       0.547
+C(Country)[T.United Arab Emirates]     0.1073      0.015      7.365      0.000       0.079       0.136
+C(Country)[T.Vietnam]                 -0.1539      0.014    -11.137      0.000      -0.181      -0.127
+log_budget                             0.9984      0.001   1180.114      0.000       0.997       1.000
+==============================================================================
+Omnibus:                     2367.842   Durbin-Watson:                   0.253
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):           139669.578
+Skew:                          -2.386   Prob(JB):                         0.00
+Kurtosis:                      32.910   Cond. No.                         184.
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC1)

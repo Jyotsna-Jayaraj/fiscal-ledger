@@ -1,0 +1,73 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:      Guns_Butter_Ratio   R-squared:                       0.960
+Model:                            OLS   Adj. R-squared:                  0.956
+Method:                 Least Squares   F-statistic:                     6557.
+Date:                Thu, 20 Aug 2026   Prob (F-statistic):               0.00
+Time:                        21:00:11   Log-Likelihood:                 1024.9
+No. Observations:                 540   AIC:                            -1956.
+Df Residuals:                     493   BIC:                            -1754.
+Df Model:                          46                                         
+Covariance Type:                  HC1                                         
+==============================================================================================================
+                                                 coef    std err          z      P>|z|      [0.025      0.975]
+--------------------------------------------------------------------------------------------------------------
+Intercept                                      0.1530      0.001    131.954      0.000       0.151       0.155
+C(Alliance_Group)[T.Non-NATO]                 -0.1021      0.003    -39.138      0.000      -0.107      -0.097
+C(Country)[T.Australia]                        0.0507      0.003     19.173      0.000       0.045       0.056
+C(Country)[T.Bangladesh]                       0.3177      0.016     19.376      0.000       0.286       0.350
+C(Country)[T.Brazil]                           0.6856      0.003    269.022      0.000       0.681       0.691
+C(Country)[T.Canada]                           0.1852      0.002     74.629      0.000       0.180       0.190
+C(Country)[T.Chile]                            0.0904      0.004     20.339      0.000       0.082       0.099
+C(Country)[T.China]                            0.1150      0.003     42.940      0.000       0.110       0.120
+C(Country)[T.Colombia]                         0.1955      0.006     34.244      0.000       0.184       0.207
+C(Country)[T.Egypt]                            0.1205      0.009     12.805      0.000       0.102       0.139
+C(Country)[T.France]                          -0.0791      0.002    -36.965      0.000      -0.083      -0.075
+C(Country)[T.Germany]                         -0.1044      0.002    -47.684      0.000      -0.109      -0.100
+C(Country)[T.Greece]                           0.1001      0.008     12.343      0.000       0.084       0.116
+C(Country)[T.India]                            0.2703      0.006     45.650      0.000       0.259       0.282
+C(Country)[T.Indonesia]                        0.1127      0.005     23.330      0.000       0.103       0.122
+C(Country)[T.Iran]                             0.2446      0.005     47.137      0.000       0.234       0.255
+C(Country)[T.Ireland]                         -0.0264      0.002    -11.336      0.000      -0.031      -0.022
+C(Country)[T.Israel]                           0.3534      0.028     12.746      0.000       0.299       0.408
+C(Country)[T.Italy]                           -0.0869      0.002    -41.836      0.000      -0.091      -0.083
+C(Country)[T.Japan]                            0.0039      0.004      1.020      0.308      -0.004       0.011
+C(Country)[T.Kazakhstan]                       0.0401      0.010      4.048      0.000       0.021       0.059
+C(Country)[T.Malaysia]                         0.0861      0.007     12.039      0.000       0.072       0.100
+C(Country)[T.Mexico]                           0.0213      0.007      3.076      0.002       0.008       0.035
+C(Country)[T.Netherlands]                     -0.0970      0.003    -37.694      0.000      -0.102      -0.092
+C(Country)[T.New Zealand]                      0.0083      0.003      3.277      0.001       0.003       0.013
+C(Country)[T.Nigeria]                          0.1584      0.021      7.411      0.000       0.117       0.200
+C(Country)[T.Pakistan]                         0.6080      0.019     31.510      0.000       0.570       0.646
+C(Country)[T.Peru]                             0.0728      0.007     10.220      0.000       0.059       0.087
+C(Country)[T.Philippines]                      0.1152      0.005     24.291      0.000       0.106       0.125
+C(Country)[T.Poland]                           0.0087      0.011      0.802      0.422      -0.013       0.030
+C(Country)[T.Portugal]                         0.0223      0.004      6.251      0.000       0.015       0.029
+C(Country)[T.Romania]                          0.1290      0.007     18.372      0.000       0.115       0.143
+C(Country)[T.Russia]                           0.3350      0.027     12.188      0.000       0.281       0.389
+C(Country)[T.Saudi Arabia]                     0.6173      0.035     17.596      0.000       0.549       0.686
+C(Country)[T.Singapore]                        0.4023      0.023     17.139      0.000       0.356       0.448
+C(Country)[T.South Africa]                     0.0164      0.003      5.663      0.000       0.011       0.022
+C(Country)[T.South Korea]                      0.3139      0.010     31.545      0.000       0.294       0.333
+C(Country)[T.Spain]                            0.1789      0.003     66.115      0.000       0.174       0.184
+C(Country)[T.Sweden]                           0.0044      0.006      0.712      0.476      -0.008       0.017
+C(Country)[T.Switzerland]                     -0.0046      0.003     -1.578      0.114      -0.010       0.001
+C(Country)[T.Thailand]                         0.0955      0.004     24.097      0.000       0.088       0.103
+C(Country)[T.Turkey]                           0.2970      0.003    107.137      0.000       0.292       0.302
+C(Country)[T.UK]                              -0.0655      0.002    -26.780      0.000      -0.070      -0.061
+C(Country)[T.USA]                              0.0183      0.003      5.350      0.000       0.012       0.025
+C(Country)[T.United Arab Emirates]             0.4190      0.008     50.619      0.000       0.403       0.435
+C(Country)[T.Vietnam]                          0.2065      0.003     59.671      0.000       0.200       0.213
+Is_Post_2022                                   0.0182      0.003      5.941      0.000       0.012       0.024
+Is_Post_2022:C(Alliance_Group)[T.Non-NATO]    -0.0297      0.005     -5.745      0.000      -0.040      -0.020
+==============================================================================
+Omnibus:                      231.678   Durbin-Watson:                   0.839
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             3757.860
+Skew:                           1.441   Prob(JB):                         0.00
+Kurtosis:                      15.598   Cond. No.                     3.94e+15
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC1)
+[2] The smallest eigenvalue is 7.17e-29. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.

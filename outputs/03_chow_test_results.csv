@@ -1,0 +1,3 @@
+Break Event,F-Statistic,p-value,Structural Break?
+1991 Dissolution of USSR,29.57730386375293,1.8101680865210447e-13,True
+2008 Global Financial Crisis,33.752441738127494,2.9881546888125235e-15,True
