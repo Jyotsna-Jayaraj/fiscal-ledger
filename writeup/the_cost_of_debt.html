@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<meta name="author" content="Data Journalism & Econometrics Team" />
+<meta name="dcterms.date" content="2026-08-21" />
+<title>The Cost of Debt: How Sovereign Spending Shifted Over 90 Years</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  h1, h2, h3 {
+    color: #1a252f;
+    margin-top: 1.5em;
+  }
+  h1 { border-bottom: 2px solid #2c3e50; padding-bottom: 10px; }
+  h2 { border-bottom: 1px solid #ecf0f1; padding-bottom: 5px; }
+  code, pre {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+  pre {
+    padding: 15px;
+    overflow-x: auto;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+  }
+  th, td {
+    border: 1px solid #dee2e6;
+    padding: 8px 12px;
+    text-align: left;
+  }
+  th {
+    background-color: #f1f3f5;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+  }
+  figcaption {
+    text-align: center;
+    font-style: italic;
+    color: #6c757d;
+    margin-top: -10px;
+    margin-bottom: 20px;
+  }
+  .header-block {
+    margin-bottom: 40px;
+  }
+  .subtitle {
+    font-size: 1.2em;
+    color: #6c757d;
+    margin-top: -10px;
+  }
+</style>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+<div class="header-block">
+  <h1>The Cost of Debt: How Sovereign Spending Shifted Over 90 Years</h1>
+  <p class="subtitle">A Data Journalism Case Study on Geopolitical Crises, Fiscal Personalities, and Guns vs. Butter Trade-Offs (1936–2026)</p>
+  <p><strong>Author:</strong> Data Journalism & Econometrics Team | <strong>Date:</strong> August 21, 2026</p>
+</div>
+
+<hr />
+
+<section id="executive-summary">
+<h2>Executive Summary</h2>
+<p>Over the past nine decades, sovereign nations have navigated a fundamental trade-off: allocating public capital between national security ("Guns") and socio-economic investment ("Butter"). Analyzing <strong>3,654 country-year observations</strong> across 45 nations spanning 1936 to 2026 reveals how global crises, debt service burdens, and alliance structures dictate fiscal priorities.</p>
+</section>
+
+<hr />
+
+<section id="data-integrity-standardization">
+<h2>1. Data Integrity &amp; Standardization</h2>
+<p>All national expenditure figures were standardized across nine functional spending categories: Defense (\(D\)), Health, Education, Social Welfare (\(S\)), Interest Debt Servicing (\(I\)), Infrastructure, Agriculture, State Transfers, and Administration.</p>
+
+<h3>Global Panel Coverage</h3>
+<p>Data continuity spans 91 years. Baseline coverage begins in 1936 with major economies and expands globally following WWII.</p>
+<figure id="fig-coverage">
+  <img src="../outputs/01_data_coverage_heatmap.jpg" alt="Global Budget Data Availability Heatmap (1936–2026)" />
+  <figcaption>Figure 1: Global Budget Data Availability Heatmap (1936–2026)</figcaption>
+</figure>
+
+<h3>Functional Budget Verification</h3>
+<p>Each sovereign budget was verified to ensure functional percentage allocations sum to <strong>100%</strong>:</p>
+\[\sum_{k=1}^{K} \text{Allocation}_k = 100\% \pm 0.03\%\]
+
+<figure id="fig-pct-sum">
+  <img src="../outputs/01_pct_sum_distribution.png" alt="Distribution of Total Budget Percentage Sums across Panel" />
+  <figcaption>Figure 2: Distribution of Total Budget Percentage Sums across Panel</figcaption>
+</figure>
+</section>
+
+<hr />
+
+<section id="long-run-expenditure-trends">
+<h2>2. Long-Run Expenditure Trends (1936–2026)</h2>
+
+<h3>Global Defense vs. Social Expenditure</h3>
+<p>Global median defense allocations fell from wartime highs (\(\approx 10.5\%\)) to a baseline of \(5.1\%\) in recent decades, while social expenditures (Health, Education, Protection) stabilized between <strong>\(36\%\) and \(41\%\)</strong>.</p>
+
+<figure id="fig-spending-trends">
+  <img src="../outputs/02_global_spending_trends.png" alt="The 90-Year Structural Shift: Global Defense vs. Social Expenditure (1936–2026)" />
+  <figcaption>Figure 3: The 90-Year Structural Shift: Global Defense vs. Social Expenditure (1936–2026)</figcaption>
+</figure>
+
+<h3>Country Trajectories</h3>
+<p>National budget strategies exhibit clear institutional choices:</p>
+<ul>
+  <li><strong>Germany &amp; Japan:</strong> Low defense spending (\(\approx 2.5\% - 4.5\%\)) paired with elevated social allocations (\(\approx 48\% - 54\%\)).</li>
+  <li><strong>United States:</strong> Elevated social spending (\(\approx 45\% - 52\%\)) alongside defense spikes during post-9/11 operations (\(\approx 12\%\)).</li>
+  <li><strong>India:</strong> A secular decline in defense allocation from \(15.0\%\) mid-century to under \(8.0\%\) post-2020.</li>
+</ul>
+
+<figure id="fig-divergent">
+  <img src="../outputs/02_divergent_country_paths.jpg" alt="Divergent Fiscal Trajectories: Defense vs. Social Allocations" />
+  <figcaption>Figure 4: Divergent Fiscal Trajectories: Defense vs. Social Allocations</figcaption>
+</figure>
+
+<h3>The Guns-vs-Butter Ratio</h3>
+<p>The Guns-vs-Butter Index measures defense relative to social investment:</p>
+\[\text{Guns-vs-Butter Ratio} = \frac{\text{Defense Allocation (\%)}}{\text{Social Allocation (\%)}} = \frac{D_t}{H_t + E_t + W_t}\]
+
+<p>The median ratio declined from \(\approx 0.25\) during the Cold War to \(\approx 0.15\) in the modern era.</p>
+
+<figure id="fig-era-dist">
+  <img src="../outputs/02_guns_butter_era_distribution.png" alt="Distribution of Guns-vs-Butter Ratio Across Geopolitical Eras" />
+  <figcaption>Figure 5: Distribution of Guns-vs-Butter Ratio Across Geopolitical Eras</figcaption>
+</figure>
+
+<figure id="fig-heatmap">
+  <img src="../outputs/02_country_ratio_heatmap.png" alt="Guns-vs-Butter Ratio Heatmap: Select Sovereign Nations (1936–2026)" />
+  <figcaption>Figure 6: Guns-vs-Butter Ratio Heatmap: Select Sovereign Nations (1936–2026)</figcaption>
+</figure>
+
+<h3>Log Social Expenditure Baseline OLS</h3>
+<p>An OLS model (\(N = 3,654\), \(R^2 = 0.998\)) establishes near-unitary elasticity (\(\beta_{\text{log\_budget}} = 0.9984\), \(p &lt; 0.001\)) between overall spending scale and social allocations.</p>
+
+<pre><code>                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:         log_social_amt   R-squared:                       0.998
+Method:                 Least Squares   F-statistic:                 2.271e+05
+No. Observations:                3654   Prob (F-statistic):               0.00
+==============================================================================
+                               coef    std err          z      P&gt;|z|
+------------------------------------------------------------------------------
+Intercept                   -2.2459      0.014   -163.517      0.000
+log_budget                   0.9984      0.001   1180.114      0.000
+C(Country)[T.France]         0.9120      0.014     62.978      0.000
+C(Country)[T.Germany]        0.7961      0.014     55.020      0.000
+C(Country)[T.USA]            0.5146      0.017     31.099      0.000
+C(Country)[T.India]         -0.2827      0.017    -16.289      0.000
+==============================================================================</code></pre>
+</section>
+
+<hr />
+
+<section id="econometrics-geopolitical-shocks">
+<h2>3. Econometrics &amp; Geopolitical Shocks</h2>
+
+<h3>Security Alliances: NATO vs. Non-NATO</h3>
+<p>Security commitments shape defense allocations. NATO members average <strong>\(9.08\%\)</strong> defense allocations (median <strong>\(5.80\%\)</strong>), whereas Non-NATO nations average <strong>\(10.03\%\)</strong> (median <strong>\(7.80\%\)</strong>) with maximum allocations reaching <strong>\(41.20\%\)</strong>.</p>
+
+<figure id="fig-alliance-box">
+  <img src="../outputs/03_defense_allocation_boxplot.png" alt="Defense Allocation Across Alliance Groups" />
+  <figcaption>Figure 7: Defense Allocation Across Alliance Groups</figcaption>
+</figure>
+
+<table id="tbl-alliance">
+  <caption>Table 1: Summary Statistics: Defense Allocation by Alliance Status</caption>
+  <thead>
+    <tr>
+      <th>Alliance Group</th>
+      <th>Count</th>
+      <th>Mean</th>
+      <th>Std Dev</th>
+      <th>Median</th>
+      <th>IQR</th>
+      <th>Max</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>NATO</strong></td>
+      <td>834</td>
+      <td>9.08%</td>
+      <td>5.56%</td>
+      <td>5.80%</td>
+      <td>4.10% – 15.00%</td>
+      <td>23.30%</td>
+    </tr>
+    <tr>
+      <td><strong>Non-NATO</strong></td>
+      <td>2730</td>
+      <td>10.03%</td>
+      <td>7.20%</td>
+      <td>7.80%</td>
+      <td>4.60% – 13.70%</td>
+      <td>41.20%</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Post-2022 Regional Conflict Dynamics</h3>
+<p>Following regional conflicts in 2022, NATO member states reversed long-term spending declines, increasing their Guns-vs-Butter ratio from <strong>\(0.184\)</strong> (2022) to <strong>\(0.202\)</strong> (2024–2026).</p>
+
+<figure id="fig-trajectory">
+  <img src="../outputs/03_guns_butter_trajectory.png" alt="Guns-vs-Butter Ratio Trajectory (2015–2026)" />
+  <figcaption>Figure 8: Guns-vs-Butter Ratio Trajectory (2015–2026)</figcaption>
+</figure>
+
+<h3>Chow Tests for Structural Breaks</h3>
+<p>Chow testing confirms structural regime changes in spending priorities following geopolitical shocks:</p>
+
+<table id="tbl-chow">
+  <caption>Table 2: Chow Test Results for Geopolitical and Economic Shocks</caption>
+  <thead>
+    <tr>
+      <th>Event</th>
+      <th>F-Statistic</th>
+      <th>p-value</th>
+      <th>Structural Break?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>1991 USSR Dissolution</strong></td>
+      <td>29.5773</td>
+      <td>&lt; 0.0001</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td><strong>2008 Financial Crisis</strong></td>
+      <td>33.7524</td>
+      <td>&lt; 0.0001</td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Post-2022 Interaction Regression</h3>
+<p>An interaction model (\(N = 540\), \(R^2 = 0.960\)) shows post-2022 rearmament effects:</p>
+<ul>
+  <li><strong>Post-2022 NATO Main Effect (<code>Is_Post_2022</code>):</strong> \(\beta = +0.0182\) (\(p &lt; 0.001\)).</li>
+  <li><strong>Post-2022 Non-NATO Interaction:</strong> \(\beta = -0.0297\) (\(p &lt; 0.001\)), indicating rearmament acceleration was concentrated among NATO members.</li>
+</ul>
+
+<pre><code>                                                 coef    std err          z      P&gt;|z|
+--------------------------------------------------------------------------------------
+Intercept                                      0.1530      0.001    131.954      0.000
+C(Alliance_Group)[T.Non-NATO]                 -0.1021      0.003    -39.138      0.000
+Is_Post_2022                                   0.0182      0.003      5.941      0.000
+Is_Post_2022:C(Alliance_Group)[T.Non-NATO]    -0.0297      0.005     -5.745      0.000</code></pre>
+</section>
+
+<hr />
+
+<section id="unsupervised-machine-learning">
+<h2>4. Unsupervised Machine Learning: Fiscal Personalities</h2>
+
+<h3>Cluster Selection</h3>
+<p>\(K\)-Means clustering across all 9 allocation dimensions identified \(K=4\) as the optimal number of fiscal archetypes.</p>
+
+<figure id="fig-k-diagnostics">
+  <img src="../outputs/04_k_selection_diagnostics.png" alt="Evaluating Optimal Number of Clusters (K): Elbow Method &amp; Silhouette Score" />
+  <figcaption>Figure 9: Evaluating Optimal Number of Clusters (K): Elbow Method &amp; Silhouette Score</figcaption>
+</figure>
+
+<h3>Fiscal Personality Profiles</h3>
+<ol>
+  <li><strong>Developmental States:</strong> Elevated Defense (\(\approx 23.5\%\)) and Education (\(\approx 17.2\%\)).</li>
+  <li><strong>Security States:</strong> High Infrastructure (\(\approx 15.4\%\)) and Administration (\(\approx 15.3\%\)).</li>
+  <li><strong>Debt-Constrained States:</strong> High Social Welfare (\(\approx 21.3\%\)) and Interest Servicing (\(\approx 13.1\%\)).</li>
+  <li><strong>Welfare States:</strong> Focused public investment in Education, Health, and Social Welfare.</li>
+</ol>
+
+<figure id="fig-profiles">
+  <img src="../outputs/04_fiscal_personality_profiles.jpg" alt="Fiscal Personality Profiles: Budget Fingerprints across Clusters" />
+  <figcaption>Figure 10: Fiscal Personality Profiles: Budget Fingerprints across Clusters</figcaption>
+</figure>
+
+<h3>Transition Matrix (1960 vs. 2025)</h3>
+<p>Markov state tracking reveals path dependency: Debt-Constrained and Developmental states maintained \(100\%\) persistence between 1960 and 2025, while \(40\%\) of Security States transitioned into Welfare States.</p>
+
+<figure id="fig-transitions">
+  <img src="../outputs/04_transition_matrix.png" alt="Sovereign Personality Transitions (1960 vs. 2025)" />
+  <figcaption>Figure 11: Sovereign Personality Transitions (1960 vs. 2025)</figcaption>
+</figure>
+</section>
+
+<hr />
+
+<section id="structural-change-points-forecasting">
+<h2>5. Structural Change Points &amp; Time-Series Forecasting</h2>
+
+<h3>Change-Point Detection (PELT)</h3>
+<p>Pruned Exact Linear Time (<code>PELT</code>) algorithms identified structural shift years across key nations:</p>
+<ul>
+  <li><strong>United States:</strong> Break points detected in <strong>2000</strong> (Post-9/11 defense expansion) and <strong>2015</strong> (Bipartisan Budget Act / sequester adjustments).</li>
+  <li><strong>Germany:</strong> Break points detected in <strong>1993</strong> (Post-unification fiscal restructuring) and <strong>2023</strong> (<em>Zeitenwende</em> defense fund expansion).</li>
+  <li><strong>United Kingdom:</strong> Break points identified in <strong>1989</strong>, <strong>1995</strong>, and <strong>2010</strong> (Austerity measures following the Global Financial Crisis).</li>
+  <li><strong>India:</strong> Break points identified in <strong>1986</strong>, <strong>1991</strong> (Balance of payments crisis &amp; economic liberalization), <strong>2001</strong>, and <strong>2021</strong>.</li>
+</ul>
+
+<figure id="fig-breaks">
+  <img src="../outputs/05_structural_breaks_detected.jpg" alt="Structural Regime Shifts in Budget Allocations" />
+  <figcaption>Figure 12: Structural Regime Shifts in Budget Allocations</figcaption>
+</figure>
+
+<h3>USA Defense Allocation Forecast (2026–2030)</h3>
+<p>An \(\text{ARIMA}(1,1,1)\) model projects US defense spending to stabilize near <strong>\(9.15\%\)</strong> through 2030, with an \(80\%\) confidence interval between <strong>\(8.15\%\)</strong> and <strong>\(10.18\%\)</strong>.</p>
+
+<figure id="fig-forecast">
+  <img src="../outputs/05_defense_forecast.png" alt="USA: Near-Term Defense Percentage Trajectory Forecast (ARIMA)" />
+  <figcaption>Figure 13: USA: Near-Term Defense Percentage Trajectory Forecast (ARIMA)</figcaption>
+</figure>
+</section>
+
+<hr />
+
+<section id="interactive-application">
+<h2>6. Interactive Application</h2>
+<p>To explore interactive country comparisons, scenario forecasts, and custom cluster profiles, run the dashboard:</p>
+<pre><code>streamlit run app/streamlit_app.py</code></pre>
+</section>
+
+</body>
+</html>
